@@ -7,7 +7,7 @@ task1String = 'Discover, Learning, with, Edureka'
 # a. Number of lowercase a and o in the following sentence.
 # b. Number of uppercase L and N in the following sentence.
 def task1():
-    print "Doing Task : 1"
+    print "Performing Task : 1"
 
 task2String = 'www.edureka.in'
 # Task 2:
@@ -18,7 +18,7 @@ task2String = 'www.edureka.in'
 # c. Remove all printable characters
 
 def task2():
-    print "Doing Task : 2"
+    print "Performing Task : 2"
 
 task3List = [0X7AE, 3+4j, -01234, 3.14e-2]
 # Task 3:
@@ -29,7 +29,7 @@ task3List = [0X7AE, 3+4j, -01234, 3.14e-2]
 # d. 3.14e-2
 
 def task3():
-    print "Doing Task : 3"
+    print "Performing Task : 3"
 
 # Task 4():
 # String Formatting Operator % which should include the following conversions:
@@ -41,7 +41,7 @@ def task3():
 # f. Exponential notation (with lowercase 'e')
 
 def task4():
-    print "Doing Task : 4"
+    print "Performing Task : 4"
 
 task1()
 task2()
