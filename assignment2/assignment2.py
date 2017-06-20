@@ -123,7 +123,6 @@ def task8():
     task8Dict = dict()
     for item in enumerate(task8List):
         task8Dict[item[1]] = int(item[0]) + 1
-
     print "List ", task8List, "converted to Dictionary: ", task8Dict
 
 task1()

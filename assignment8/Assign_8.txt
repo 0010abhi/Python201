@@ -1,0 +1,64 @@
+													Module 8 assignment
+													
+Quest1: How to get the datasets that come with scikit-learn package?
+Ans: i. from sklearn import datasets as ds
+	ii. import sklearn.datasets as ds
+
+
+Quest2: Give example of two datasets that is shipped with scikit-learn package. Show example how to use one. 
+Ans: Iris flower dataset which is accessed as “iris” and digits dataset accessed as “digits”
+	 To load it into a variable: digits = datasets.load_digits()
+
+		
+Quest3: List at least 5 modules from scikit-learn?
+Ans: sklearn.cluster - Clustering
+	 sklearn.datasets
+	 sklearn.linear_model – Generalized linear models
+	 sklearn.ensemble – Ensemble methods
+	 sklearn.feature_extraction – Feature extraction
+
+
+Quest 4th, 5h and 6th
+Ans:	import numpy as np
+		from sklearn.cluster import KMeans
+		from numpy.random import RandomState
+		import matplotlib.pyplot as plt
+		rnge = RandomState(1)
+		#Initial random data points
+		x, y = np.random.uniform(0, 10, 100).reshape(2, 25)
+		# Instantiate model
+		kmeans = KMeans(n_clusters=4, random_state=rnge)
+		# Fit model
+		kmeans.fit(np.transpose((x,y)))
+		kmeans.cluster_centers_ # To get the centroid coordinates of each cluster
+		plt.scatter(x, y, c=kmeans.labels_) # Plots the data points
+		plt.scatter(*kmeans.cluster_centers_.T, c='r', marker='+', s=100) # Plots the centroid points
+		plt.show()
+		
+		
+Quest7:. How many daemon processes run on a Hadoop cluster? Explain.
+Ans: Hadoop is comprised of five separate daemons. Each of these daemons runs in its own JVM.
+	Following 3 Daemons run on Master nodes.
+	NameNode - This daemon stores and maintains the metadata for HDFS.
+	Secondary NameNode - Performs housekeeping functions for the NameNode.
+	JobTracker - Manages MapReduce jobs, distributes individual tasks to machines running the Task Tracker.
+	
+	Following 2 Daemons run on each Slave nodes.
+	DataNode – Stores actual HDFS data blocks.
+	TaskTracker – It is Responsible for instantiating and monitoring individual Map and Reduce tasks. 
+
+Quest8 :If Hadoop spawned 200 tasks for a job and one of the task failed. What will Hadoop do in this case?
+Ans: It will restart the task again on some other TaskTracker and only if the task fails more than four (default setting and can be changed) times will it kill the job.
+
+Quest9 :Where does mapper output stores the intermediate results?
+Ans: 	The mapper output (intermediate data) is stored on the Local file system (NOT HDFS)
+		of each individual mapper nodes. This is typically a temporary directory location
+		which can be setup in config by the hadoop administrator. The intermediate data is
+		cleaned up after the Hadoop Job completes.
+
+Quest 10: When does reducers start their execution in a map reduce process?
+Ans: 	 In a MapReduce job reducers do not start executing the reduce method until the all
+		Map jobs have completed. Reducers start copying intermediate key-value pairs from
+		the mappers as soon as they are available. The programmer defined reduce method
+		is called only after all the mappers have finished.
+		

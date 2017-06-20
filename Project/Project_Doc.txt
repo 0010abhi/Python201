@@ -1,0 +1,44 @@
+1)Problem statement
+	Attached As PDF
+2)Solution Flow Diagram with difficluties to process further
+	Get The List From Given Url.
+		That is ready by beautiful soup using selenium & geckon driver Because it was not loading directly. it was coming throught jax call on that page.
+	What is sentiment analysis?
+		After google i cam to an answer which was convincing.
+	After this how to do it?
+		On this search i got a link where it was explained so i used it:
+		http://www.geeksforgeeks.org/twitter-sentiment-analysis-using-python/
+		So i just passed list to the code given after understanding it.
+		yet there are few hurdles but i resolved it.
+		
+3)Tools and Packages Used
+	import re
+	import tweepy
+	from tweepy import OAuthHandler
+	from textblob import TextBlob
+	import time
+	from selenium import webdriver
+	from selenium.webdriver.common.by import By
+	from selenium.webdriver.support.ui import WebDriverWait
+	from selenium.webdriver.support import expected_conditions as EC
+	from selenium.common.exceptions import TimeoutException
+	from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+	from bs4 import BeautifulSoup
+
+4)Solution: Python Script with proper commenting
+	Done.
+5)Challenges Faced during the project
+	-> How to get data Because it has to use some additonal feature than normal urllib2
+	-> There were few alternatives Like Selenium, QtPy, Ghost, etc...
+	-> In the end i came to conclusion to use Selenium after failure to rest of them.
+		Here in selenium we are using firefox so firefox need to be installed on your machine and its binary means .exe is reuired.
+	-> After this some geckon driver need to be installed which also took my effort.
+		Then it got resolved.
+		Now i am using.
+			Python 2.7.13
+			pip 9.0.1
+			selenium 3.4.3
+			geckonderiver 0.17 (Latest release) otherwise it will unexpectedly shut down with error code status:2
+			
+		
+	

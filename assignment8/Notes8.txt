@@ -1,0 +1,10 @@
+Data Analytics:
+
+## We can gather data from either users or machine.
+1) Gather the data : Tools Like BeautifulSoup, Scrapy, etc...
+2) Store the data : Using any DB API, e.g., Pymongo
+3) Comptation of data : Hadoop Streaming or Pydoop or MRjob
+4) Analysis of data : Pandas, Scipy, Numpy, Skicit-learn, NLTK
+5) Visualization of data (plotting graphs): Matplotlib
+
+
